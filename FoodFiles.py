@@ -39,15 +39,9 @@ for i in range(len(foods)-1,0,-1): #Counting downwards to be able to delete with
 
 #Converting to Dictionary
 foods_dict=[]
-highfiber_dict=[]
-lowfat_dict=[]
-low_glycemic_index_dict=[]
 for i in range(1,len(foods)):
-    foods_dict.append({foods[0]:foods[i]})
-for i in range(1,len(highfiber)):
-    highfiber_dict.append({highfiber[0]:highfiber[i]})
-for i in range(1,len(lowfat)):
-    lowfat_dict.append({lowfat[0]:lowfat[i]})
-for i in range(1,len(low_glycemic_index)):
-    low_glycemic_index_dict.append({low_glycemic_index[0]:low_glycemic_index[i]})
+    foods_dict.append({foods[0]:foods[i],highfiber[0]:highfiber[i],low_glycemic_index[0]:low_glycemic_index[i],lowfat[0]:lowfat[i]})
 #-----------------------------------------------------------------------------------------------------------------------------------------------
+#Part 3
+import json
+foods_json=json.dumps(foods_dict, indent=4)
